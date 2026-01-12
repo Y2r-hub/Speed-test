@@ -1,0 +1,166 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+body.dark {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+body.dark header {
+    background-color: #1e1e1e;
+    box-shadow: 0 2px 4px rgba(255,255,255,0.1);
+}
+
+header h1 {
+    font-size: 1.5rem;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#speed-test {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Meter Container */
+.meter-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.meter {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.gauge circle {
+    transition: stroke-dashoffset 1s ease-in-out;
+}
+
+.meter-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.meter-text small {
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+
+/* Button */
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 1rem;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Status */
+#status {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #fff;
+    border-top: 1px solid #e0e0e0;
+}
+
+body.dark footer {
+    background-color: #1e1e1e;
+    border-top: 1px solid #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+    header h1 {
+        font-size: 1.2rem;
+    }
+    main {
+        padding: 1rem;
+    }
+    .meter-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .meter {
+        width: 120px;
+        height: 120px;
+    }
+    .meter-text {
+        font-size: 1rem;
+    }
+}
