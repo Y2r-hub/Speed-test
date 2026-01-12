@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online internet speed test. Check your download speed, upload speed, and ping with our modern, responsive tool.">
+    <meta name="keywords" content="internet speed test, download speed, upload speed, ping test, online speed checker">
+    <meta name="author" content="Your Name">
+    <title>Internet Speed Test - Check Your Connection</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Internet Speed Test</h1>
+        <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </header>
+    <main>
+        <section id="speed-test">
+            <div class="meter-container">
+                <div class="meter" id="download-meter">
+                    <svg viewBox="0 0 100 100" class="gauge">
+                        <circle cx="50" cy="50" r="45" stroke="#e0e0e0" stroke-width="10" fill="none"></circle>
+                        <circle cx="50" cy="50" r="45" stroke="#4CAF50" stroke-width="10" fill="none" stroke-dasharray="283" stroke-dashoffset="283" id="download-arc"></circle>
+                    </svg>
+                    <div class="meter-text">
+                        <span id="download-speed">0</span> Mbps
+                        <br><small>Download</small>
+                    </div>
+                </div>
+                <div class="meter" id="upload-meter">
+                    <svg viewBox="0 0 100 100" class="gauge">
+                        <circle cx="50" cy="50" r="45" stroke="#e0e0e0" stroke-width="10" fill="none"></circle>
+                        <circle cx="50" cy="50" r="45" stroke="#2196F3" stroke-width="10" fill="none" stroke-dasharray="283" stroke-dashoffset="283" id="upload-arc"></circle>
+                    </svg>
+                    <div class="meter-text">
+                        <span id="upload-speed">0</span> Mbps
+                        <br><small>Upload</small>
+                    </div>
+                </div>
+                <div class="meter" id="ping-meter">
+                    <svg viewBox="0 0 100 100" class="gauge">
+                        <circle cx="50" cy="50" r="45" stroke="#e0e0e0" stroke-width="10" fill="none"></circle>
+                        <circle cx="50" cy="50" r="45" stroke="#FF9800" stroke-width="10" fill="none" stroke-dasharray="283" stroke-dashoffset="283" id="ping-arc"></circle>
+                    </svg>
+                    <div class="meter-text">
+                        <span id="ping-speed">0</span> ms
+                        <br><small>Ping</small>
+                    </div>
+                </div>
+            </div>
+            <button id="start-test" class="btn">Start Speed Test</button>
+            <div id="status">Click "Start Speed Test" to begin.</div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Internet Speed Test. Built with HTML, CSS, and JavaScript.</p>
+    </footer>
+</body>
+</html>
