@@ -12,7 +12,7 @@ This is a free and responsive Internet Speed Test website built using HTML, CSS,
 - Works on all modern browsers
 
 ## Live Demo
-https://Y2r-hub.github.io/speed-test/
+https://y2r-hub.github.io/Speed-test/
 
 ## Technologies Used
 - HTML
